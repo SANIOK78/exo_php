@@ -1,22 +1,31 @@
 <?php 
     $weapons = ['fists', 'whip', 'gun'];
-    $opponentWeapon = $weapons[rand(0,2)]; // Cela permet de choisir une arme de manière aléatoire.
+
+    // Cela permet de choisir une arme de manière aléatoire.
+    $opponentWeapon = $weapons[rand(0,2)];
 
     echo $opponentWeapon."\n";
 
-    $indyWeapon = $opponentWeapon;
+    switch($opponentWeapon) {
+        case 'fists':
+            $indyWeapon = 'gun'; 
+            echo "Le pistolet bat le poing \n" ;
+            break;
+        case 'whip' :
+            $indyWeapon = 'fists'; 
+            echo "Le poing bat le fouet \n" ;
+            break;
+        case 'gun' :
+            $indyWeapon = 'whip'; 
+            echo "Le fouet bat le pistolet \n" ;
+            break;
+        default: 
+            echo "Cas pas pris en compte \n";
+    }
 
-    echo $indyWeapon;
+    
+
+    
 
 
-/* 
-PS C:\Users\Utilisateur\Desktop\testQuetes\php> php exo_3.php
-fists
-fists
-PS C:\Users\Utilisateur\Desktop\testQuetes\php> php exo_3.php
-gun
-gun
-PS C:\Users\Utilisateur\Desktop\testQuetes\php> php exo_3.php
-fists
-fists
-*/
+
