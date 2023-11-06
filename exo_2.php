@@ -5,18 +5,16 @@
         "Indiana Jones 5" => ['Harrison Ford', 'Phoebe Waller-Bridge', 'Antonio Banderas' ]
     ];
 
-    foreach($movies as $titreMovie => $actors) {
+    foreach($movies as $titleMovie => $actors) {
 
-        echo "Dans le film ". $titreMovie. " , les principaux acteurs sont : \n";
+        echo "Dans le film ". $titleMovie. " , les principaux acteurs sont : \n";
 
         foreach($actors as $actor) {
             echo " - ".$actor . "\n";
         }
     }
 
-?>
-
-<!-- 
+/*
 Dans le film Les Aventuriers de l'arche perdue , les principaux acteurs sont :
  - Harrison Ford
  - Karen Allen
@@ -29,4 +27,4 @@ Dans le film Indiana Jones 5 , les principaux acteurs sont :
  - Harrison Ford
  - Phoebe Waller-Bridge
  - Antonio Banderas
--->
+ */
